@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { assets } from '../../../assets/assets'
 import { useRef } from 'react'
 
@@ -40,22 +41,22 @@ const Navbar = () => {
         <Image src={assets.header_bg_color} alt='' className='fixed top-0 right-0 w-11/12 -z-10  w-full translate-y-[-80%]' />
     </div>
     <nav className={`${scroll ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-sm' : ''} w-full fixed px-5 flex items-center justify-between pt-5 px-8 lg:px-8 xl:px-[8%] z-50 py-4`}>
-        <a href='/#top'>
+        <Link href='/#top'>
             <Image src={assets.my_logo} alt='' className='w-18 cursor-pointer mr-14' />
-        </a>
+        </Link>
       <ul className={`hidden md:flex items-center  gap-6 la-gap-8 rounded-full px-12 py-3  ${scroll ?'bg-white shadow-sm bg-opacity-50': ''}`}>
-        <li> <a className="oyo-font" href='/#top'>Home</a> </li>
-        <li> <a className="oyo-font" href='/#about'>About</a> </li>
-        {/* <li> <a className="oyo-font" href='/#projects'>Projects</a> </li> */}
-        <li> <a className="oyo-font" href='/#services'>Services</a> </li>
-        <li> <a className="oyo-font" href='/blog'>Blog</a> </li>
+        <li> <Link className="oyo-font" href='/#top'>Home</Link> </li>
+        <li> <Link className="oyo-font" href='/#about'>About</Link> </li>
+        {/* <li> <Link className="oyo-font" href='/#projects'>Projects</Link> </li> */}
+        <li> <Link className="oyo-font" href='/#services'>Services</Link> </li>
+        <li> <Link className="oyo-font" href='/blog'>Blog</Link> </li>
       </ul>
 
       <div className='flex items-center gap-4'>
         <button>
             <Image src={assets.moon_icon} alt='Toggle Theme' className='w-6' />
         </button>
-        <a href='/#contact' className='hidden oyo-font lg:flex items-center gap-3 px-10 py-2.5 border border-grey-500 rounded-full ml-4'>Contact <Image src={assets.arrow_icon} alt='Contact' className='w-3'/></a>
+        <Link href='/#contact' className='hidden oyo-font lg:flex items-center gap-3 px-10 py-2.5 border border-grey-500 rounded-full ml-4'>Contact <Image src={assets.arrow_icon} alt='Contact' className='w-3'/></Link>
         <button className='block md:hidden ml-3' onClick={openMenu}>
             <Image src={assets.menu_black} alt='Toggle Theme' className='w-6' />
         </button>
@@ -70,11 +71,11 @@ const Navbar = () => {
             <Image src={assets.close_black} alt='Close Menu' className='w-5  cursor-pointer' onClick={closeMenu} />
           </div>
 
-          <li> <a className="oyo-font" onClick={closeMenu} href='/#top'>Home</a> </li>
-          <li> <a className="oyo-font" onClick={closeMenu} href='/#about'>About</a> </li>
-          <li> <a className="oyo-font" onClick={closeMenu} href='/#projects'>Projects</a> </li>
-          <li> <a className="oyo-font" onClick={closeMenu} href='/#contact'>Contact</a> </li>
-          <li> <a className="oyo-font" onClick={closeMenu} href='/blog'>Blog</a> </li>
+          <li> <Link className="oyo-font" onClick={closeMenu} href='/#top'>Home</Link> </li>
+          <li> <Link className="oyo-font" onClick={closeMenu} href='/#about'>About</Link> </li>
+          <li> <Link className="oyo-font" onClick={closeMenu} href='/#projects'>Projects</Link> </li>
+          <li> <Link className="oyo-font" onClick={closeMenu} href='/#contact'>Contact</Link> </li>
+          <li> <Link className="oyo-font" onClick={closeMenu} href='/blog'>Blog</Link> </li>
         </ul>
       </div>
     </nav>

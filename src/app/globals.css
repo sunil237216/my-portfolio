@@ -1,14 +1,12 @@
 @import "tailwindcss";
 
 *{
-  font-family: outfit;
+  font-family: 'Outfit', sans-serif;
 }
 
-
-
-  .oyo-font {
-    font-family:  "Ovo", "sans-serif";;
-  }
+.oyo-font {
+  font-family: 'Ovo', serif;
+}
 
 
 
