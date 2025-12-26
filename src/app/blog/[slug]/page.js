@@ -14,15 +14,17 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   return {
     title: `${post.title} - Sunil Portfolio`,
     description: post.excerpt,
   };
 }
 
-export default function BlogPost({ params }) {
-  const post = getPostBySlug(params.slug);
+export default async function BlogPost({ params }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   return (
     <>
