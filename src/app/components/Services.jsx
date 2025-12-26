@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Services = () => {
   return (
-   <div id='services' className='w-full px-[12%] py-10 scroll-mt-20'>
+   <div id='services' className='w-full px-[12%] scroll-mt-20'>
     <h4 className='text-center mb-2 text-lg font-Ovo'>What I Offer</h4>
     <h2 className='text-center text-5xl font-Ovo'>My Services</h2>
 
@@ -12,7 +12,7 @@ const Services = () => {
         I specialize in creating powerful, scalable web solutions tailored to your business needs. From concept to deployment, I deliver excellence in every project.
     </p>
 
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-6 my-10'>
+    <div className='grid  grid-cols-1 md:grid-cols-2 gap-6 my-10'>
         {serviceData.map(({icon, title, description, link}, index) => (
           <div key={index} className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:shadow-lg hover:-translate-y-1 duration-500 hover:bg-lightHover hover:border-gray-500'>
             <Image src={icon} alt='' className='w-10' />
