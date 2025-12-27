@@ -6,8 +6,14 @@ import Image from 'next/image';
 import { assets } from '../../../assets/assets';
 
 export const metadata = {
-  title: 'Blog - Sunil Portfolio',
-  description: 'Read my latest articles on web development, technology, and programming',
+  title: 'Blog - Sunil Jadhav | Web Development & Technology Articles',
+  description: 'Read latest articles on React, Next.js, Angular, RxJS, and modern web development. Tips, tutorials, and best practices from a frontend developer.',
+  keywords: 'web development blog, React tutorials, Next.js guides, Angular tips, JavaScript articles, frontend development',
+  openGraph: {
+    title: 'Blog - Sunil Jadhav',
+    description: 'Web development articles and tutorials',
+    type: 'website',
+  },
 };
 
 export default function BlogPage() {

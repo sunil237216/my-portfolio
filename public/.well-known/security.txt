@@ -1,0 +1,3 @@
+Contact: mailto:sunil.jadhav38@gmail.com
+Preferred-Languages: en
+Canonical: https://suniljadhav.dev/.well-known/security.txt
